@@ -1,4 +1,13 @@
+/* body {
+    background-color: #122881;
+} */
+
 #WebHead {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#InputForm{
     align-items: center;
     justify-content: center;
     text-align: center;
