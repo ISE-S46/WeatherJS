@@ -1,21 +1,20 @@
-/* body {
-    background-color: #122881;
-} */
-
 #content {
     align-items: center;
     justify-content: center;
     text-align: center;
 }
-#WeatherDiv{
+
+#WeatherDiv {
     align-items: center;
     justify-content: center;
     text-align: center;
-} 
-#Weather{
+}
+
+#Weather {
     width: 18rem;
 }
-#WeatherContainer{
+
+#WeatherContainer {
     text-align: center;
     margin: 0 auto;
     align-items: center;
