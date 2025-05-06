@@ -1,11 +1,7 @@
 import { API_key } from "./config.js";
 
-const key = API_key;
-
 const Location = document.getElementById("InputLocation");
 const submit = document.getElementById("submit");
-
-let LocationName;
 
 submit.addEventListener("click", GetLocationName)
 Location.addEventListener("keydown", (key) => {
@@ -14,39 +10,13 @@ Location.addEventListener("keydown", (key) => {
     }
 })
 
-function GetLocationName() {
-    LocationName = Location.value;
-    const LatLongAPI = `http://api.openweathermap.org/geo/1.0/direct?q=${LocationName}&appid=${API_key}`;
-    // console.log(LatLongAPI);
-    GetLatLong(LatLongAPI);
-}
+async function GetLocationName() {
+    let LocationName = Location.value;
+    const API = `http://api.weatherapi.com/v1/current.json?key=${API_key}&q=${LocationName}`;
 
-async function GetLatLong(LatLongAPI) {
-    try{
-        const Response = await fetch(LatLongAPI);
+    // console.log(API);
 
-        if (!Response.ok) {
-            alert("Please Enter Valid City Name");
-            throw new Error("Respond error: " + Response.statusText);
-        }
-        const LatLonData = await Response.json();
-        let lat = LatLonData[0].lat;
-        let lon = LatLonData[0].lon;
-
-        // console.log(lat);
-        // console.log(lon);
-
-        CurrentWeather(lat, lon);
-
-    }catch (error){
-        console.error('GetLatLong() Error:', error);
-    }
-}
-
-function CurrentWeather(lat, lon) {
-    const API = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=metric`;
-    console.log(API);
-    GetWeather(API)
+    GetWeather(API);
 }
 
 async function GetWeather(API) {
@@ -60,11 +30,19 @@ async function GetWeather(API) {
         const WeatherData = await Response.json();
 
         console.log(WeatherData);
-        const WeatherContainer = document.getElementById("Weather");
+        const WeatherContainer = document.getElementById("WeatherContainer");
 
         const WeatherDiv = document.createElement("div");
+        WeatherDiv.id = "Weather";
+        WeatherDiv.className = "col-6 col-md-3 mb-3";
         WeatherDiv.innerHTML = `
-            <p>${WeatherData.name}</p>
+            <div id="WeatherDiv" class="card">
+                <p>${WeatherData.location.name}</p>
+                <p>${WeatherData.location.country}</p>
+                <p>${WeatherData.current.temp_c} °C</p>
+                <img src=${WeatherData.current.condition.icon}></img>
+                <p>${WeatherData.current.condition.text}</p>
+            </div>
         `;
 
         WeatherContainer.appendChild(WeatherDiv);

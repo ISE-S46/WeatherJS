@@ -2,12 +2,22 @@
     background-color: #122881;
 } */
 
-#WebHead {
+#content {
     align-items: center;
     justify-content: center;
     text-align: center;
 }
-#InputForm{
+#WeatherDiv{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+} 
+#Weather{
+    width: 18rem;
+}
+#WeatherContainer{
+    text-align: center;
+    margin: 0 auto;
     align-items: center;
     justify-content: center;
     text-align: center;
