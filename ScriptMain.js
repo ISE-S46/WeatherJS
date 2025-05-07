@@ -52,6 +52,8 @@ async function GetWeather(API) {
 
     } catch (error) {
         console.error('GetWeather() Error:', error);
+        const Error = new bootstrap.Toast(document.getElementById('alert'));
+        Error.show();
     }
 }
 
