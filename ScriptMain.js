@@ -4,10 +4,10 @@ const Location = document.getElementById("InputLocation");
 const submit = document.getElementById("submit");
 
 window.onload = () => {
-    document.getElementById('InputLocation').value = '';
+    Location.value = '';
 }
 
-submit.addEventListener("click", GetLocationName)
+submit.addEventListener("click", GetLocationName);
 Location.addEventListener("keydown", (key) => {
     if (key.key === "Enter") {
         GetLocationName();
@@ -38,7 +38,7 @@ async function GetWeather(API) {
         const WeatherDiv = document.createElement("div");
         WeatherDiv.id = "Weather";
         WeatherDiv.className = "col-6 col-md-3 mb-3";
-        WeatherDiv.innerHTML = `
+        WeatherDiv.innerHTML += `
             <div id="WeatherDiv" class="card shadow-lg p-3 rounded">
                 <h4><strong>${WeatherData.location.name}</strong></h4>
                 <p>${WeatherData.location.country}</p>
