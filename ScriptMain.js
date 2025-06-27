@@ -1,4 +1,4 @@
-import bootstrap from 'bootstrap'
+import * as bootstrap from 'bootstrap';
 
 const API_key = import.meta.env.VITE_API_key;
 
