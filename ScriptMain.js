@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import * as bootstrap from 'bootstrap';
 
 const API_key = import.meta.env.VITE_API_key;
@@ -18,7 +19,7 @@ Location.addEventListener("keydown", (key) => {
 
 async function GetLocationName() {
     let LocationName = Location.value;
-    const API = `http://api.weatherapi.com/v1/current.json?key=${API_key}&q=${LocationName}`;
+    const API = `https://api.weatherapi.com/v1/current.json?key=${API_key}&q=${LocationName}`;
 
     // console.log(API);
     GetWeather(API);
