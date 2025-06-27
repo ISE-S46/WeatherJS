@@ -1,5 +1,7 @@
 # WeatherJS
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ef6f4e37-1213-446e-b437-b71391ee2d4b/deploy-status)](https://app.netlify.com/projects/bootstrap-weather-js/deploys)
+
 Simple weather website to display current weather data based on city name by calling Free Weather Api.
 
 ### PC view:
