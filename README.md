@@ -22,8 +22,10 @@ Simple weather website to display current weather data based on city name by cal
 - **Frontend :**
   - HTML
   - CSS
-    - Bootstrap Framework
+    - Bootstrap framework npm package
   - JavaScript
+    - Node.js v 22.16.0
+    - Vite
 
 - **API :** [FreeWeatherAPI](https://www.weatherapi.com/)
 
@@ -47,9 +49,9 @@ Follow these steps to set up the project locally:
 
 ### 3. **Create config.js**:
 
-- create file name config.js
+- create file name .env
 ```js
-export const API_key = "your_api_key";
+VITE_API_key = "your_api_key";
 ```
 
 ### 4. **Launch the Application**:
