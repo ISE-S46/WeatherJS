@@ -1,4 +1,6 @@
-import { API_key } from "./config.js";
+import bootstrap from 'bootstrap'
+
+const API_key = import.meta.env.VITE_API_key;
 
 const Location = document.getElementById("InputLocation");
 const submit = document.getElementById("submit");

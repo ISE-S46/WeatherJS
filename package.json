@@ -1,0 +1,28 @@
+{
+  "name": "weatherjs",
+  "version": "1.0.0",
+  "description": "Simple weather website to display current weather data based on city name by calling Free Weather Api.",
+  "main": "config.js",
+  "devDependencies": {
+    "vite": "^7.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ISE-S46/WeatherJS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ISE-S46/WeatherJS/issues"
+  },
+  "homepage": "https://github.com/ISE-S46/WeatherJS#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.7"
+  }
+}
