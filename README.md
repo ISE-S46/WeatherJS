@@ -4,6 +4,8 @@
 
 Simple weather website to display current weather data based on city name by calling Free Weather Api.
 
+[Live demo](https://bootstrap-weather-js.netlify.app/)
+
 ### PC view:
 ![WeatherJS](/Img/Preview.png) 
 
@@ -57,6 +59,7 @@ VITE_API_key = "your_api_key";
 ```
 
 ### 4. **Launch the Application**:
-- Open Index.html in your preferred web browser.
-    #### Or
-- Install live server extension on VSCode and click Go live button
+```bash
+npm run build
+npm run preview
+```
